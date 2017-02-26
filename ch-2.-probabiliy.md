@@ -1,7 +1,5 @@
 # Chapter 2. Probability
 
-tags: quant_interview
-
 ---
 ## Part 1. Permutation and Combinatin
 
