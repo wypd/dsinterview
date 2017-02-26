@@ -76,65 +76,62 @@
 
 15. One morning, in Springfield, somewhere in the US, it started snowing at a heavy but constant rate. Homer Simpson had just started his own snowplow business. His snowplow started out at 8:00 A.M. At 9:00 A.M. it had gone 2 miles. By 10:00 A.M. it had gone 3 miles. Assuming that the snowplow removes a constant volume of snow per hour, determine the time at which it started snowing.
 
-15. Integrate sin(x)/x from -infinity to +infinity
+16. Integrate $$\sin(x)/x$$ from -infinity to +infinity
 
-    > $\int_0^{\infty} \frac{sin(x)}{x} dx = \int L(sin(x))(s) ds = \int \frac{1}{1+s^2}ds = \frac{\pi}{2}$
+    > $$\int_0^{\infty} \frac{sin(x)}{x} dx = \int L(sin(x))(s) ds = \int \frac{1}{1+s^2}ds = \frac{\pi}{2}$$
     
-    > $\displaystyle \int_0^\infty \left({\int_0^\infty e^{- x y} \sin x \, \mathrm d y}\right) \, \mathrm d x = \int_0^\infty \left({\int_0^\infty e^{- x y} \sin x \, \mathrm d x}\right) \, \mathrm d y$
+    > $$ \int_0^\infty \left({\int_0^\infty e^{- x y} \sin x \, \mathrm d y}\right) \, \mathrm d x = \int_0^\infty \left({\int_0^\infty e^{- x y} \sin x \, \mathrm d x}\right) \, \mathrm d y$$
     
     > [https://en.wikipedia.org/wiki/Dirichlet_integral](https://en.wikipedia.org/wiki/Dirichlet_integral)
 
-16. Solve ODE 1) $y' = y + 1$, 2) $y' = \frac{y}{x} + 1$
+17. Solve ODE 1) $$y' = y + 1$$, 2) $$y' = \frac{y}{x} + 1$$
 
 ## Part 2. Linear Algebra
 
-1. Assuming that all entries of an correlation matrix which are not on the main diagonal are equal to $\rho$, find upper bound and lower bound for $\rho$.
+1. Assuming that all entries of an correlation matrix which are not on the main diagonal are equal to $$\rho$$, find upper bound and lower bound for $$\rho$$.
 
-    > $A = \rho M + (1 - \rho) I$
-    
+    > $$A = \rho M + (1 - \rho) I$$    
     > [http://stats.stackexchange.com/questions/72790/bound-for-the-correlation-of-three-random-variables](http://stats.stackexchange.com/questions/72790/bound-for-the-correlation-of-three-random-variables)
 
-2. Let $A = \begin{bmatrix} 2 & -2 \\ -2 & 5 \end{bmatrix}$, find  1) $M$, such that $M^2 = A$; 2) M, such that $M'M = A$.
+2. Let $$A = \begin{bmatrix} 2 & -2 \\ -2 & 5 \end{bmatrix}$$, find  1) $$M$$, such that $$M^2 = A$$; 2) M, such that $$M'M = A$$.
 
 3. Let A and B be square matrices of the same size. Show that the traces of the matrices AB and BA are equal
 
-    > $tr(AB) = \sum_i (AB)_{ii} = \sum_i \sum_j a_{ij}b_{ji} = \sum_j \sum_i b_{ji}a_{ij} = \sum_j (BA)_{jj} = tr(BA)$
-    
+    > $$tr(AB) = \sum_i (AB)_{ii} = \sum_i \sum_j a_{ij}b_{ji} = \sum_j \sum_i b_{ji}a_{ij} = \sum_j (BA)_{jj} = tr(BA)$$
     > [http://www2.math.ou.edu/~dmccullough/teaching/slides/maa2010.pdf](http://www2.math.ou.edu/~dmccullough/teaching/slides/maa2010.pdf)
 
 4. QR decomposition
 
-    > For each non-singular $n\times n$ matrix $A$, there is a unique pair of orthogonal matrix $Q$ and upper-triangular matrix $R$ with positive diagonal elements such that $A=QR$. QR decomposition is often used to solve linear system $Ax=b$ when A is a non-singular matrix. Since $Q$ is an othogonal matrix, $Q^{-1} = Q'$ and $QRx = b \Rightarrow Rx=Q'b$, Because $R$ is an upper-triangular matrix, we can begin with $x_n$, and recursively calculate all $x_i$.
+    > For each non-singular $$n\times n$$ matrix $$A$$, there is a unique pair of orthogonal matrix $$Q$$ and upper-triangular matrix $$R$$ with positive diagonal elements such that $$A=QR$$. QR decomposition is often used to solve linear system $$Ax=b$$ when A is a non-singular matrix. Since $Q$ is an othogonal matrix, $$Q^{-1} = Q'$$ and $$QRx = b \Rightarrow Rx=Q'b$$, Because $$R$$ is an upper-triangular matrix, we can begin with $$x_n$$, and recursively calculate all $$x_i$$.
 
 5. LU decomposition (non-singular square)
 
-    > Let $A$ be a nonsingular $n\times n$ matrix, **LU decomposition** expresses $A$ as the product of a lower and upper triangular matrix: $A=LU$. There exists a unique unit lower triangular $L$ with diagonal elements all equal to one and a unique upper triangular matirx $U$ such that $A=LU$. 
-    > The LU decomposition is the Gaussian transform process that zero the $a_{ij}$ where $j > i$. 
-    > LU decomposition can be used to solve $Ax=b$ and calcualte the determinant of $A$: $LUx=b \Rightarrow Ux=y, Ly=b$.
+    > Let $$A$$ be a nonsingular $$n\times n$$ matrix, **LU decomposition** expresses $$A$$ as the product of a lower and upper triangular matrix: $$A=LU$$. There exists a unique unit lower triangular $L$ with diagonal elements all equal to one and a unique upper triangular matirx $U$ such that $$A=LU$$. 
+    > The LU decomposition is the Gaussian transform process that zero the $$a_{ij}$$ where $$j > i$$. 
+    > LU decomposition can be used to solve $$Ax=b$$ and calcualte the determinant of $$A$$: $$LUx=b \Rightarrow Ux=y, Ly=b$$.
     
 6. Cholesky decomposition (symmetric positive definite square)
 
-    > When $A$ is a symmetric positive definite matrix, **Cholesky decomposition** expresses $A$ as $A=R'R$, where $R$ is a unique upper-triangular matrix with positive diagonal entries. Essentially, it is a $LU$ decomposition with property $L=U'$.
-    **Cholesky decomposition is useful in Monte Carlo simulation to generate correlated random variables.**
-    
+    > When $$A$$ is a symmetric positive definite matrix, **Cholesky decomposition** expresses $$A$$ as $$A=R'R$$, where $$R$$ is a unique upper-triangular matrix with positive diagonal entries. Essentially, it is a $$LU$$ decomposition with property $$L=U'$$.
+    **Cholesky decomposition is useful in Monte Carlo simulation to generate correlated random variables.**    
     > [http://math.stackexchange.com/questions/163470/generating-correlated-random-numbers-why-does-cholesky-decomposition-work](http://math.stackexchange.com/questions/163470/generating-correlated-random-numbers-why-does-cholesky-decomposition-work)
 
 7. SVD decomposition.
 
-    > For any $n\times p$ matrix $X$, there exists a factorization of the form $X=UDV'$, where $U$ and $V$ are $n\times p$ and $p \times p$ orthogonal matrices, with columns of $U$ spanning the column space of $X$, and the columns of $V$ spanning the row space; $D$ is a $p\times p$ diagonal matrix called the singular values of $X$. 
+    > For any $$n\times p$$ matrix $$X$$, there exists a factorization of the form $$X=UDV'$$, where $$U$$ and $$V$$ are $$n\times p$$ and $$p \times p$$ orthogonal matrices, with columns of $$U$$ spanning the column space of $$X$$, and the columns of $$V$$ spanning the row space; $$D$$ is a $$p\times p$$ diagonal matrix called the singular values of $$X$$. 
     > Properties:
-    > 1. Denote $\sigma_i$ as the diagonal elements in singular matrix $D$, $u_i$ and $v_i$ are the corresponding singular vector, we have  $Xv_i = \sigma_i u_i$ and $X'u_i = \sigma_i v_i$.
-    > 2. For a positive definite (covariance) matrix, we have $V=U$ and $\Sigma = UDU'$. Furthermore, $D$ is the diagonal matrix of eigenvalues and $U$ is the matrix of $n$ corresponding eigenvectors.
-    > 3. $v_i$ are orthonormalized eigenvectors of $X'X$ and $u_i$ are orthonormalized eigenvectors of $XX'$.
-    > 4. $\sigma_j = \sqrt{\lambda_j(X'X)}$, where $\lambda_j(X'X)$ is the $j$th largest eigenvalue of $X'X$.
+    > 1. Denote $$\sigma_i$$ as the diagonal elements in singular matrix $$D$$, $$u_i$$ and $$v_i$$ are the corresponding singular vector, we have $$Xv_i = \sigma_i u_i$$ and $$X'u_i = \sigma_i v_i$$.
+    > 2. For a positive definite (covariance) matrix, we have $$V=U$$ and $$\Sigma = UDU'$$. Furthermore, $$D$$ is the diagonal matrix of eigenvalues and $$U$$ is the matrix of $$n$$ corresponding eigenvectors.
+    > 3. $$v_i$$ are orthonormalized eigenvectors of $$X'X$$ and $$u_i$$ are orthonormalized eigenvectors of $$XX'$$.
+    > 4. $$\sigma_j = \sqrt{\lambda_j(X'X)}$$, where $$\lambda_j(X'X)$$ is the $$j$$th largest eigenvalue of $$X'X$$.
 
 8. Special matrixs.
 
-    > 1) **Nilpotent**: Square matrix $N$ such that $N^k=0$.
-    > 2) **Idempotent matrix**: $A^2=A$
-    > 3) **Hermitian matrix**: A complex matrix $A$ is a Hermitian matrix if it equals its own complex conjugate transpose, that is $A = A^H$.
-    > \begin{bmatrix} 2 & 2 + i & 4 \\ 2 - i &  3 & i \\ 4 & -i & 1\end{bmatrix}
-    > A complex matrix $U$ is unitary matrix if the inverse of $U$ equals the complex conjugate transpose of $U$, $U^{-1} = U^H$.
+    > 1) **Nilpotent**: Square matrix $N$ such that $$N^k=0$$.
+    > 2) **Idempotent matrix**: $$A^2=A$$
+    > 3) **Hermitian matrix**: A complex matrix $$A$$ is a Hermitian matrix if it equals its own complex conjugate transpose, that is $$A = A^H$$.
+    > $$\begin{bmatrix} 2 & 2 + i & 4 \\ 2 - i &  3 & i \\ 4 & -i & 1\end{bmatrix}$$
+    > A complex matrix $$U$$ is unitary matrix if the inverse of $$U$$ equals the complex conjugate transpose of $U$, $$U^{-1} = U^H$$.
 
 ## Part 3. Numerical Methods
 
