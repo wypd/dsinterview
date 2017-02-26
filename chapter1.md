@@ -131,58 +131,56 @@
     > 2) **Idempotent matrix**: $$A^2=A$$
     > 3) **Hermitian matrix**: A complex matrix $$A$$ is a Hermitian matrix if it equals its own complex conjugate transpose, that is $$A = A^H$$.
     > $$\begin{bmatrix} 2 & 2 + i & 4 \\ 2 - i &  3 & i \\ 4 & -i & 1\end{bmatrix}$$
-    > A complex matrix $$U$$ is unitary matrix if the inverse of $$U$$ equals the complex conjugate transpose of $U$, $$U^{-1} = U^H$$.
+    > A complex matrix $$U$$ is unitary matrix if the inverse of $$U$$ equals the complex conjugate transpose of $$U$$, $$U^{-1} = U^H$$.
 
 ## Part 3. Numerical Methods
 
 1. What is convergence rate of Newton method?
 
-    > $||x_{t+1} - x_t|| <= c ||x_t - x_{t-1}||^2$
-    
-    > [https://www.math.washington.edu/~burke/crs/408/lectures/L10-Rates-of-conv-Newton.pdf](https://www.math.washington.edu/~burke/crs/408/lectures/L10-Rates-of-conv-Newton.pdf)
+    > $$||x_{t+1} - x_t|| <= c ||x_t - x_{t-1}||^2$$
+    > [](https://www.math.washington.edu/~burke/crs/408/lectures/L10-Rates-of-conv-Newton.pdf)
 
 2. What is convergence rate of Monte Carlo methods?
 
-    > $\frac{1}{\sqrt{n}}$
+    > $$\frac{1}{\sqrt{n}}$$
 
 3. Generate IID Normal random variable.
 
-    > 1. Box-Muller $U_1, U_2 \sim Unif(0, 1)$, then $X_1 = \cos(2\pi U_1) \sqrt{-\log(U_2)}$ and $X_2 = \sin(2\pi U_1) \sqrt{-\log(U_2)}$.
+    > 1. Box-Muller $$U_1, U_2 \sim Unif(0, 1)$$, then $$X_1 = \cos(2\pi U_1) \sqrt{-\log(U_2)}$$ and $$X_2 = \sin(2\pi U_1) \sqrt{-\log(U_2)}$$.
     > 2. Acceptance-Rejection method
 
 4. Lagrangian method
 
     > Given general form
-    > \begin{align*}
+    > $$ \begin{align*}
     \min \ & f(x) \\
     \text{s.t.} \ & h(x) \le 0 \\
     & \ g(x) = 0
-    \end{align*}
-    > The Lagrangian function is $L = f(x) + \mu h(x) + \lambda g(x)$.
-    > The KKT condition is
-    \begin{align*}
+    \end{align*}$$
+    > The Lagrangian function is $$L = f(x) + \mu h(x) + \lambda g(x)$$.
+    > The KKT condition are
+    $$ \begin{align*}
     \frac{\partial L}{\partial x} & = 0 \\
     h(x) & \le 0 \\
     \mu & \ge 0 \\
     \mu h(x) & = 0 \\
     g(x) & = 0
-    \end{align*}
+    \end{align*}$$
 
 5. Newton method
     
     > **Newton's method**
-    > Newton's method is to find the new iterate $x_{k + 1}$ as a function of $x_k$, $x_{k + 1} = x_k + p_k$, where $p_k$ given by minimizing Taylor expansion 
-    $$m_k(p) = f_k + p'\nabla f_k + \frac{1}{2}p' B_k p$$.
-    Thus, $p_k = -B_k^{-1}\nabla f_k $
+    > Newton's method is to find the new iterate $$x_{k + 1}$$ as a function of $$x_k, x_{k + 1} = x_k + p_k$$, where $$p_k$$ given by $$p_k = -B_k^{-1}\nabla f_k$$, from minimizing Taylor expansion  $$m_k(p) = f_k + p'\nabla f_k + \frac{1}{2}p' B_k p$$.
     > **DFP**
     > Instead of computing the Hessian matrix directly, DFP approximate it based on the change in gradient between iterations. The idea is to approximate Hessian via several properties
-    > 1) $B_k$ must be symmetric
-    > 2) $B_k$ muct be formed such that the gradient of the model is equal to the function's gradient at the points $x_k$ and $x_{k-1}$. 
-    > 3) Close to $B_{k-1}$
+    > 1) $$B_k$$ must be symmetric
+    > 2) $$B_k$$ muct be formed such that the gradient of the model is equal to the function's gradient at the points $$x_k$$ and $$x_{k-1}$$. 
+    > 3) Close to $$B_{k-1}$$
     > **BFGS**
     > BFGS is to approximate the inverse of Hessian directly using the same technique as in DFP. 
-    > L-BFGS (limited-memory BFGS) stores teh approximate Hessian in a compressed form that requires storing only a constant multiple of vectors of length $n$. 
-
+    > L-BFGS (limited-memory BFGS) stores the approximate Hessian in a compressed form that requires storing only a constant multiple of vectors of length $$n$$.
+    
+    
 ## Part 4. Stochastic Calculus
 
 1. Martingale
