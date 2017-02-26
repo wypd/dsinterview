@@ -1,5 +1,7 @@
 # Chapter 1. Math and Optimization
 
+---
+
 ## Part 1. Basic Calc
 
 1. The number $$2^{29}$$ has 9 digits, all different. Find the missing digit without computing $$2^{29}$$?
@@ -179,7 +181,9 @@
     > **BFGS**
     > BFGS is to approximate the inverse of Hessian directly using the same technique as in DFP. 
     > L-BFGS (limited-memory BFGS) stores the approximate Hessian in a compressed form that requires storing only a constant multiple of vectors of length $$n$$.
-    
+
+---
+Not reviewed (Feb 26)
     
 ## Part 4. Stochastic Calculus
 
