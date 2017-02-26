@@ -14,7 +14,7 @@
 
 3. Prove that the area of a triangle is given by $$A = \sqrt{s(s-a)(s-b)(s-c)}$$ where a, b, and c are the side lengths, and $$s=\frac{a+b+c}{2}$$ is half the perimter.
 
-    > Denote $\theta$ as $\cos(\theta) = \frac{a^2 + b^2 - c^2}{2ab}$.
+    > Denote $$\theta$$ as $$\cos(\theta) = \frac{a^2 + b^2 - c^2}{2ab}$$.
     > 
     $$\begin{align*}
     A & = \frac{1}{2}a b \sin(\theta) \\
