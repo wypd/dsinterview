@@ -29,53 +29,52 @@
     
     > [Ratio comparison](http://math.stackexchange.com/questions/1174116/showing-sum-infty-n-1-frac-1-e-sqrt-n-converges)
 
-5. What are $\sum_{k = 1}^n k$, $\sum_{k = 1}^n k^2$, $\sum_{k = 1}^n k^3$.
+5. What are $$\sum_{k = 1}^n k$$, $$\sum_{k = 1}^n k^2$$, $$\sum_{k = 1}^n k^3$$.
 
-    > $\sum_{k = 1}^n k^4 = \sum_{k = 0}^{n-1} (k + 1)^4 \Rightarrow \sum_{k = 1}^n k^3 = \frac14n^2(n+1)^2$
-    
+    > $$\sum_{k = 1}^n k^4 = \sum_{k = 0}^{n-1} (k + 1)^4 \Rightarrow \sum_{k = 1}^n k^3 = \frac14n^2(n+1)^2$$    
     > [http://math.stackexchange.com/questions/320985/how-to-determine-equation-for-sum-k-1n-k3](http://math.stackexchange.com/questions/320985/how-to-determine-equation-for-sum-k-1n-k3)
 
+6. What is the integral of $$\sec(x)$$ from $$x=0$$ to $$x=\frac{\pi}{6}$$?
 
-7. What is the integal of $\sec(x)$ from $x=0$ to $x=\frac{\pi}{6}$?
+    > $$d\sec(x) = \sec(x) \tan(x) dx$$
+    > $$d\tan(x) = \sec(x) dx$$
 
-    > $d\sec(x) = \sec(x) \tan(x) dx$ and $d\tan(x) = \sec(x) dx$
+7. Solution to ODE
 
-8. Solution to ODE
+    > 1. If $$r_1$$ and $$r_2$$ are real and $$r_1 \neq r_2$$, then the general solution is $$y=c_1 e^{r_1 x} + c_2 e^{r_2 x}$$;
+    > 2. If $$r_1$$ and $$r_2$$ are real and $$r_1 = r_2 = r$$, then the general solution is $$y=c_1 e^{rx} + c_2 x e^{rx}$$;
+    > 3. If $$r_1$$ and $$r_2$$ are complex number $$\alpha + i\beta$$, then the general solution is $$y=e^{\alpha x}(c_1 \cos \beta x + c_2 \sin \beta x)$$.
 
-    > 1. If $r_1$ and $r_2$ are real and $r_1 \neq r_2$, then the general solution is $y=c_1 e^{r_1 x} + c_2 e^{r_2 x}$;
-    > 2. If $r_1$ and $r_2$ are real and $r_1 = r_2 = r$, then the general solution is $y=c_1 e^{rx} + c_2 x e^{rx}$;
-    > 3. If $r_1$ and $r_2$ are complex number $\alpha + i\beta$, then the general solution is $y=e^{\alpha x}(c_1 \cos \beta x + c_2 \sin \beta x)$
+8. What is the $$100$$th digit to the right of the decimal point in the decimal representation of $$(1+\sqrt{2})^{3000}$$?
 
-9. What is the 100th digit to the right of the decimal point in the decimal representation of $(1+\sqrt{2})^{3000}$?
+9. Fibonacci formula
 
-10. Fibonacci formula
+    > $$F_n = \frac{(\frac{1+\sqrt{5}}{2})^n - (\frac{1-\sqrt{5}}{2})^n}{\sqrt{5}}$$
 
-    > $F_n = \frac{(\frac{1+\sqrt{5}}{2})^n - (\frac{1-\sqrt{5}}{2})^n}{\sqrt{5}}$
+10. Given $$\frac{1}{a} + \frac{1}{b} = \frac{1}{c}$$ and $$gcd(a, b, c) = 1$$, is $$a + b$$ a perfect square?
 
-11. Given $\frac{1}{a} + \frac{1}{b} = \frac{1}{c}$ and $gcd(a, b, c) = 1$, is $a + b$ a perfect square?
-
-    > Let $gcd(a, b) = k$, then $c(a_1 + b_1) = k a_1 b_1$, then we have
-    $(a_1 + b_1) | k$ and $k | (a_1 + b_1)$. So $a + b = k^2$.
-    
+    > Let $$gcd(a, b) = k$$, then $$c(a_1 + b_1) = k a_1 b_1$$, then we have
+    $$(a_1 + b_1) | k$$ and $$k | (a_1 + b_1)$$. So $$a + b = k^2$$.
     > [http://quantquestions.tumblr.com/post/81580564393/quant-interview-question-perfect-square](http://quantquestions.tumblr.com/post/81580564393/quant-interview-question-perfect-square)
 
-12. Unit root
+11. Unit root
 
-    > Let $\omega = e^{\frac{2\pi i}{n}}$, which implies $\omega^n = 1$, then we have $$1 + \omega + \omega^2 + \omega^{n - 1} = 0$$
+    > Let $$\omega = e^{\frac{2\pi i}{n}}$$, which implies $$\omega^n = 1$$, then we have $$1 + \omega + \omega^2 + \omega^{n - 1} = 0$$
     
     > [vieta formula](https://en.wikipedia.org/wiki/Vieta%27s_formulas)
 
-13. Stirling's approximation
+12. Stirling's approximation
 
-    > $n! \sim \sqrt{2\pi n}(\frac{n}{e})^n$
-    
+    > $$n! \sim \sqrt{2\pi n}(\frac{n}{e})^n$$
     > [https://en.wikipedia.org/wiki/Stirling%27s_approximation](https://en.wikipedia.org/wiki/Stirling%27s_approximation)
     
-13. Prove the following inequality: $1/2 \cdot 3/4 \cdot 5/6 \cdots 99/100 < 1/10$
+13. Prove the following inequality: $$1/2 \cdot 3/4 \cdot 5/6 \cdots 99/100 < 1/10$$
 
-14. A worm can crawl at a velocity c. He is attempting to cross a rubber sheet of initial length L. One end of the sheet is fixed, the other end is being pulled at a velocity s such that the sheet is being stretched. How long does it take the worm to cross the sheet?
+14. A worm can crawl at a velocity c. He is attempting to cross a rubber sheet of initial length $$L$$. One end of the sheet is fixed, the other end is being pulled at a velocity s such that the sheet is being stretched. How long does it take the worm to cross the sheet?
 
-    > $x' = c + \frac{s\cdot x}{s\cdot t + L}$
+    > $$x' = c + \frac{s\cdot x}{s\cdot t + L}$$
+
+15. One morning, in Springfield, somewhere in the US, it started snowing at a heavy but constant rate. Homer Simpson had just started his own snowplow business. His snowplow started out at 8:00 A.M. At 9:00 A.M. it had gone 2 miles. By 10:00 A.M. it had gone 3 miles. Assuming that the snowplow removes a constant volume of snow per hour, determine the time at which it started snowing.
 
 15. Integrate sin(x)/x from -infinity to +infinity
 
