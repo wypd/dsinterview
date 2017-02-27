@@ -397,7 +397,7 @@
 
 1. If there is a $$50\%$$ probability that bond $$A$$ will default next year and a $$30\%$$ probability that bond $$B$$ will default. What is the range of probability that at least one bond defaults and what is the range of their correlation?
 
-    > $$0.5 - 0.8$, $\rho = \frac{\mathbb E XY - \mathbb EX \mathbb EY}{\sqrt{p_x (1-p_x) p_y (1-p_y)}}$$
+    > $$0.5 - 0.8, \rho = \frac{\mathbb E XY - \mathbb EX \mathbb EY}{\sqrt{p_x (1-p_x) p_y (1-p_y)}}$$
 
 2. Counter example that $$A$$ and $$B$$ are independent, $$A$$ and $$C$$ are independent. Are $$A$$ and $$B \cap C$$ independent?
 
