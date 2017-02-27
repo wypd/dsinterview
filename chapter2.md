@@ -54,15 +54,14 @@
     > [http://math.stackexchange.com/questions/1355511/probability-that-no-two-consecutive-heads-occur](http://math.stackexchange.com/questions/1355511/probability-that-no-two-consecutive-heads-occur)
     > Similar question: Suppose we roll a fair die 100 times. What is the probability of a run of at least 10 sixes?
 
-
 7. Poker combinations
 
-    > A single pair: ${13 \choose 1} \cdot {4 \choose 2} \cdot {12 \choose 3} \cdot {4 \choose 1} ^3$
-    > Two pairs: ${13 \choose 2} \cdot {4 \choose 2}^2 \cdot {44 \choose 1}$
-    > A triple: ${13 \choose 1} \cdot {4 \choose 3} \cdot {12 \choose 2} {4 \choose 1}^2$
-    > Full house: ${13 \choose 1} \cdot {4 \choose 3} \cdot {12 \choose 1} \cdot {4 \choose 2}$
-    > Four of a kind: ${13 \choose 1} \cdot {48 \choose 1}$
-    > A Straight: $10 \cdot {4 \choose 1}^5$
+    > A single pair: $${13 \choose 1} \cdot {4 \choose 2} \cdot {12 \choose 3} \cdot {4 \choose 1} ^3$$
+    > Two pairs: $${13 \choose 2} \cdot {4 \choose 2}^2 \cdot {44 \choose 1}$$
+    > A triple: $${13 \choose 1} \cdot {4 \choose 3} \cdot {12 \choose 2} {4 \choose 1}^2$$
+    > Full house: $${13 \choose 1} \cdot {4 \choose 3} \cdot {12 \choose 1} \cdot {4 \choose 2}$$
+    > Four of a kind: $${13 \choose 1} \cdot {48 \choose 1}$$
+    > A Straight: $$10 \cdot {4 \choose 1}^5$$
 
 8. How many different ways can you invest \$20,000 into five funds in increments of \$1,000?
 
