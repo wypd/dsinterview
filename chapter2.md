@@ -8,7 +8,7 @@
     > $$\frac{n}{2^{n-1}}$$
     > [http://math.stackexchange.com/questions/325141/probability-that-n-points-on-a-circle-are-in-one-semicircle](http://math.stackexchange.com/questions/325141/probability-that-n-points-on-a-circle-are-in-one-semicircle)
     
-2. Five letters to five people. What is the probability that all five letters are all in the wrong envelopes? What if there are $n$ letters? <font color = 'red'> What is the probability of exactly $r$ matches?
+2. Five letters to five people. What is the probability that all five letters are all in the wrong envelopes? What if there are $$n$$ letters? What is the probability of exactly $$r$$ matches?
 
     > Inclusion and exclusion.
     ```
@@ -18,43 +18,40 @@
                           - P(A and B and C and D) - P(...) -......
                           + P(A and B and C and D and E)
     ```
-    > $1 - (1 - \frac{1}{2} + \frac{1}{6} - \frac{1}{24} + \frac{1}{120}) = \frac{44}{120} = \frac{11}{30}$
-    > For $n$ folders
-    > $P = 1 - 1 + \frac{1}{2!} - \frac{1}{3!} + \frac{1}{4!} ... \rightarrow e^{-1}$
-    
+    > $$1 - (1 - \frac{1}{2} + \frac{1}{6} - \frac{1}{24} + \frac{1}{120}) = \frac{44}{120} = \frac{11}{30}$$
+    > For $$n$$ folders, the probability with no match is
+    > $$P = 1 - 1 + \frac{1}{2!} - \frac{1}{3!} + \frac{1}{4!} ... \rightarrow e^{-1}$$
+    > The probability with exact $$r$$ matches is 
+    > $$P = 1 - 1 + \frac{1}{2!} - \frac{1}{3!} ... + (-1)^{n - r}\frac{1}{(n - r)!}$$
     > [http://mathforum.org/library/drmath/view/56592.html](http://mathforum.org/library/drmath/view/56592.html)
 
 3. You are taking out candies one by one from a jar that has 10 red candies, 20 blue candies, and 30 green candies in it. What is the probability that there are at least 1 blue candy and 1 green candy left in the jar when you have taken out all the red candies?
 
     > Consider two events: green before blue and red, blue before green and red.
-    > $\frac{2}{6}\frac{3}{4} + \frac{3}{6}\frac{2}{3}=\frac{7}{12}$
+    > $$\frac{2}{6}\frac{3}{4} + \frac{3}{6}\frac{2}{3}=\frac{7}{12}$$
 
 4. What is the expected number of cards that need to be turned over in a regular 52-card deck in order to see the first ace?
 
     > For each card, there is $1/5$ chance that it is drawn before ace.
-    > $\frac{48}{5} + 1=\frac{53}{5}$
+    > $$\frac{48}{5} + 1=\frac{53}{5}$$
 
 5. (**Coupon Problem**) There are $N$ distinct types of coupons in cereal boxes and each types, independent of prior selections, is equally likely to be in a box. 1) If a child wants to collect a complete set of coupons with at least one of each type, how many coupons on average are needed to make such a complete set? 2) If the child has collected n coupons, what is the expected number of distinct coupon types?
 
-    > 1) $\mathbb{E}[T] = \sum_{n=1}^N \frac{N}{n}$
+    > 1) $$\mathbb{E}[T] = \sum_{n=1}^N \frac{N}{n}$$
     > 2) 
-    \begin{align*}
+    $$\begin{align*}
     \mathbb{E}[N] & = \sum_i P(\text{coupon i is collected}) \\ 
     & = N \cdot P(\text{coupon 1 is collected}) \\
     & = N (1 - (\frac{N-1}{N})^n)
-    \end{align*}
-    
+    \end{align*}$$
     > [https://en.wikipedia.org/wiki/Coupon_collector%27s_problem](https://en.wikipedia.org/wiki/Coupon_collector%27s_problem)
 
 6. A fair coin is tossed n times, what is the probability that no two consecutive heads appear? 
     
-    > $f(n)$: number of paths that do not have two consecutive heads appear. 
-    > $f(1) = 2$, $f(2) = 3$
-    > $f(n) = f(n - 1) + f(n - 2)$
+    > $$f(n)$$: number of paths that do not have two consecutive heads appear.
+    > $$f(1) = 2$$, $$f(2) = 3$$, and $$f(n) = f(n - 1) + f(n - 2)$$
     > Fibonacci!
-    
     > [http://math.stackexchange.com/questions/1355511/probability-that-no-two-consecutive-heads-occur](http://math.stackexchange.com/questions/1355511/probability-that-no-two-consecutive-heads-occur)
-
     > Similar question: Suppose we roll a fair die 100 times. What is the probability of a run of at least 10 sixes?
 
 
