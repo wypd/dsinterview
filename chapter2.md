@@ -310,15 +310,15 @@
 
 7. **Difficult** Players A and B match pennies for $$N$$ times. They keep a tally of their gains and losses. After the first toss, what is the chance that at no time during the game will they be even?
 
-    > $P(\text{no tie}) = \frac{N - 1 \choose n}{2^{N-1}}$
+    > $$P(\text{no tie}) = \frac{N - 1 \choose n}{2^{N-1}}$$
 
 8. Dynamic dice game. A casino comes up with a fancy dice game. It allows you to roll a dice as many times as you want unless a 6 appears. After each roll, if 1 - 5 appears, you will win that amount; but if 6 appears, all the moneys you have won in the game is lost and the game stops. After each roll, if the dice number is 1-5, you can decide whether to keep the money or keep on rolling. How much are you willing to pay to play the game (if you are risk neutral)?
 
-    > Start from the stopping time when $\mathbb{E}X \le \frac{5}{6}(\mathbb{E}X + 3)$
+    > Start from the stopping time when $$\mathbb{E}X \le \frac{5}{6}(\mathbb{E}X + 3)$$
 
 9. On average, how many times must a 6-sided die be rolled until there are two rolls in a row that differ by 1 (such as a 2 followed by a 1 or 3, or a 6 followed by a 5)? What if we roll until there are two rolls in a row that differ by no more than 1 (so we stop at a repeated roll, too)?
 
-    > $\mathbb E = 1 + \frac{1}{6}(\mathbb E_1 + \mathbb E_2 + \mathbb E_3 + \mathbb E_4 + \mathbb E_5 + \mathbb E_6)$
+    > $$\mathbb E = 1 + \frac{1}{6}(\mathbb E_1 + \mathbb E_2 + \mathbb E_3 + \mathbb E_4 + \mathbb E_5 + \mathbb E_6)$$
 
 10. On average, how many times must a pair of 6-sided dice be rolled until all sides appear at least once?
 
@@ -328,84 +328,86 @@
 
     > dynamic programming. Start from the ending state and deduct backward
 
-12. Given the set of numbers from 1 to n: $\{ 1, 2, 3 ... n \}$. We draw n numbers randomly (with uniform distribution) from this set (with replacement). What is the expected number of distinct values that we would draw? 
+12. Given the set of numbers from 1 to n: $$\{ 1, 2, 3 ... n \}$$. We draw n numbers randomly (with uniform distribution) from this set (with replacement). What is the expected number of distinct values that we would draw? 
 
-    > $f(k) = \mathbb{E} [\text{number of distinct number among k draws}]$
-    > $f(n) = \sum_i P(\text{number i is picked}) = n(1 - (\frac{n-1}{n})^n)$
+    > $$f(k) = \mathbb{E} [\text{number of distinct number among k draws}]$$
+    > $$f(n) = \sum_i P(\text{number i is picked}) = n(1 - (\frac{n-1}{n})^n)$$
     
 13. There are 26 black(B) and 26 red(R) cards in a standard deck. A run is a maximum block of consecutive cards of the same color. For example, a sequence RRRRBBBRBRB of only 11 cards has 6 runs; namely, RRRR, BBB, R, B, R, B. Find the expected number of runs in a shuffled deck of cards.
 
-    > Let $Y_i$ denote the event that $X_i$ and $X_{i + 1}$ are of the different colors. 
-    > Then $\mathbb E [ \sum_{i = 1}^{n - 1}Y_i ] + 1 = n/2 + 1$
+    > Let $$Y_i$$ denote the event that $X_i$ and $$X_{i + 1}$$ are of the different colors. 
+    > Then $$\mathbb E [ \sum_{i = 1}^{n - 1}Y_i ] + 1 = n/2 + 1$$
 
-14. <font color = 'red'>Three people start with integer amounts a,b and c. In each round, each one tosses a fair coin. If not all faces are the same, the person with the different face gets a rupee from each of the other two. If all faces are the same, no money is exchanged. This process is repeated till one of them gets bankrupt. What is the expected number of rounds till the game ends?</font>
+14. **Difficult** Three people start with integer amounts a,b and c. In each round, each one tosses a fair coin. If not all faces are the same, the person with the different face gets a rupee from each of the other two. If all faces are the same, no money is exchanged. This process is repeated till one of them gets bankrupt. What is the expected number of rounds till the game ends?
     
-    > $Y_n = A_n \cdot B_n \cdot C_n$, and $S_n = a_n + b_n + c_n$ where $A_n = A_{n - 1} + a_n$ and so forth.
-    > $\mathbb{E} [Y_n] = Y_{n-1} - \frac{3}{4}(S_{n-1} + 2)$, thus $Y_n - \frac{3n}{4}(S_n - 2)$ is a martingale. 
-    > $\tau = \frac{4abc}{3(a + b + c - 2)}$
-
+    > $$Y_n = A_n \cdot B_n \cdot C_n$$, and $$S_n = a_n + b_n + c_n$$ where $$A_n = A_{n - 1} + a_n$$ and so forth.
+    > $$\mathbb{E} [Y_n] = Y_{n-1} - \frac{3}{4}(S_{n-1} + 2)$$, thus $$Y_n - \frac{3n}{4}(S_n - 2)$$ is a martingale. 
+    > $$\tau = \frac{4abc}{3(a + b + c - 2)}$$
     > [http://www.cseblog.com/2011/02/coin-toss-bankruptcy.html](http://www.cseblog.com/2011/02/coin-toss-bankruptcy.html)
 
-15. <font color = 'red'>Consider a random walk around the edges of a square. From any vertex, the probability of moving to any adjacent vertex is 0.5. Suppose the walk stops as soon as after all traversing through all the vertices, you return to your starting vertex. What is the expected path length?</font>
+15. **Difficult** Consider a random walk around the edges of a square. From any vertex, the probability of moving to any adjacent vertex is 0.5. Suppose the walk stops as soon as after all traversing through all the vertices, you return to your starting vertex. What is the expected path length?
 
-    > Denote $A, B, C, D$ as four vertexs. 
-    > Step 1. Average steps from $A$ to $B$, $A$ to $C$ is $N_{AB} = N_{AC} = 3$, and $N_{AD} = 4$
-    > Step 2. Probability of visit $D$ before $B$, two absorbing state random walk, $P_B = \frac{1}{3}$. 
+    > Denote $$A, B, C, D$$ as four vertexs. 
+    > Step 1. Average steps from $$A$$ to $$B$$, $$A$$ to $$C$$ is $$N_{AB} = N_{AC} = 3$$, and $$N_{AD} = 4$$
+    > Step 2. Probability of visit $$D$$ before $$B$$, two absorbing state random walk, $$P_B = \frac{1}{3}$$. 
     > Step 3. Three situations. 1) Pass A, B, C, then to D and back to A, 2) Pass A, B, D, C, then back to A, 3) Pass A, D, C, then to B, and to A. 
-    > $N = \frac{2}{3}(4 + 3 + 3) + \frac{1}{3}(4 + 4) = \frac{28}{3}$
+    > $$N = \frac{2}{3}(4 + 3 + 3) + \frac{1}{3}(4 + 4) = \frac{28}{3}$$
 
 16. Recursive of random walk. (1D, 2D, and 3D)
 
-    > Let $X_i = \begin{cases} 1, & w.p.\frac{1}{2} \\ -1, & w.p.\frac{1}{2}\end{cases}$, and $S_n = \sum_i X_i$. 
-    > $P(S_{2n} = S_0) = {2n \choose n} (\frac{1}{2})^{2n} \rightarrow \frac{1}{\sqrt{\pi n}}$ by Stirling approximation.
-    > The expected number of return to $S_0$ is $\mathbb {E} = \sum_n P(S_{2n} = S_0) \rightarrow \infty$.
-    > The probability of return to $S_0$ is 1. 
+    > Let $$X_i = \begin{cases} 1, & w.p.\frac{1}{2} \\ -1, & w.p.\frac{1}{2}\end{cases}$, and $S_n = \sum_i X_i$$. 
+    > $$P(S_{2n} = S_0) = {2n \choose n} (\frac{1}{2})^{2n} \rightarrow \frac{1}{\sqrt{\pi n}}$$ by Stirling approximation.
+    > The expected number of return to $$S_0$$ is $$\mathbb {E} = \sum_n P(S_{2n} = S_0) \rightarrow \infty$$.
+    > The probability of return to $$S_0$$ is 1. 
     
     > Zero-One law. 
-    > If $P(S_n = S_0) = 1$, then $P(S_n = S_0 \text{ infinity often}) = 1$; if $P(S_n = S_0) < 1$, then $(S_n = S_0 \text{ infinity often}) = 0$
+    > If $$P(S_n = S_0) = 1$$, then $$P(S_n = S_0 \text{ infinity often}) = 1$$; if $$P(S_n = S_0) < 1$$, then $$(S_n = S_0 \text{ infinity often}) = 0$$
     
-17. <font color = 'red'>Coin flips. 1) Given a string $s$, find $\mathbb E [s]$ = expected waiting time for first occurence.</font>
+17. **Difficult** Coin flips. 1) Given a string $$s$$, find $$\mathbb E [s]$$ = expected waiting time for first occurence.
 
-    > Let $F(s)$ be frequency of a string, e.g., $F(s) = \frac{1}{2^{n(s)}}$, and $V(x) = \{t | t \in R(k) \text{for some k and s overlaps at t} \}$, e.g., $V(HTHTH) = \{H, HTH\}$. 
-    > $\mathbb E [s] = \frac{1}{F(s)} + \sum_{t \in V(s)}\frac{1}{F(t)}$
+    > Let $$F(s)$$ be frequency of a string, e.g., $$F(s) = \frac{1}{2^{n(s)}}$$, and $$V(x) = \{t | t \in R(k) \text{for some k and s overlaps at t} \}$$, e.g., $$V(HTHTH) = \{H, HTH\}$$. 
+    > $$\mathbb E [s] = \frac{1}{F(s)} + \sum_{t \in V(s)}\frac{1}{F(t)}$$
     
-18. <font color = 'red'>Random walk first hitting time.</font>
+18. **Difficult** Random walk first hitting time.
 
-    > Let $\tau_k = \min \{t |  S_t = k, t > 0\}$ .
-    > 
+    > Let $$\tau_k = \min \{t |  S_t = k, t > 0\}$$ .
+    > $$
     \begin{align*} 
     P(\tau_0 = 2k) & = P(\tau_0 = 2k | X_1 = 1)\\
     & = P(\tau_1 = 2k - 1)\\
     & = \frac{2k - 1 \choose k}{2^{2k - 1}} \frac{1}{2k - 1} \\
     & = 2^{-2k+1}\frac{1}{k}{2k - 2 \choose k - 1} 
-    \end{align*}
+    \end{align*}$$
 
-19. <font color = 'red'>Brownian motion first fitting time .</font> Let $W(t)$ be a standard Wiener process and $\tau_x$ be the first passage time to level $x$. What is the probability density function of $\tau_x$ and the expected value of $\tau_x$?
+19. **Difficult** Brownian motion first fitting time. Let $$W(t)$$ be a standard Wiener process and $$\tau_x$$ be the first passage time to level $$x$$. What is the probability density function of $$\tau_x$$ and the expected value of $$\tau_x$$?
 
     > 1) Without drift term
-    > Let $\tau_x = \min \{ t | W_t = x, t > 0\}$, where $x>0$.
-    \begin{align*}
+    > Let $$\tau_x = \min \{ t | W_t = x, t > 0\}$$, where $$x>0$$.
+    $$\begin{align*}
     P(\tau_x < t) & = 2P(W_t \ge x) = 2\Phi(-\frac{x}{\sqrt{t}}) \\
     & = 2 \int^{-x/\sqrt{t}}\frac{1}{\sqrt{2\pi}}\exp(-\frac{z^2}{2})dz\\
     f_{\tau_x}(t)& = \frac{xt^{-3/2}}{\sqrt{2\pi}}\exp(-\frac{x^2}{2t})
-    \end{align*}
-    > 2) With drift term $Z_t = \mu t + W_t$, then $\exp(-2\mu Z_t)$ is a martingale.
+    \end{align*}$$
+    > 2) With drift term $$Z_t = \mu t + W_t$$, then $$\exp(-2\mu Z_t)$$ is a martingale.
 
     > [without drift](http://math.stackexchange.com/questions/840634/brownian-motion-first-hitting-time-distribution?rq=1)
     > [with drift](http://math.stackexchange.com/questions/1053294/density-of-first-hitting-time-of-brownian-motion-with-drift)
 
 ## Part 5. Correlation
 
-1. If there is a $50\%$ probability that bond $A$ will default next year and a $30\%$ probability that bond $B$ will default. What is the range of probability that at least one bond defaults and what is the range of their correlation?
+1. If there is a $$50\%$$ probability that bond $$A$$ will default next year and a $$30\%$$ probability that bond $$B$$ will default. What is the range of probability that at least one bond defaults and what is the range of their correlation?
 
-    > $0.5 - 0.8$, $\rho = \frac{\mathbb E XY - \mathbb EX \mathbb EY}{\sqrt{p_x (1-p_x) p_y (1-p_y)}}$
+    > $$0.5 - 0.8$, $\rho = \frac{\mathbb E XY - \mathbb EX \mathbb EY}{\sqrt{p_x (1-p_x) p_y (1-p_y)}}$$
 
-2. Counter example that $A$ and $B$ are independent, $A$ and $C$ are independent. Are $A$ and $B \cap C$ independent?
+2. Counter example that $$A$$ and $$B$$ are independent, $$A$$ and $$C$$ are independent. Are $$A$$ and $$B \cap C$$ independent?
 
     > Roll two dice:
-    > $A$: sum is even
-    > $B$: first is even
-    > $C$: second is even
+    > $$A$$: sum is even
+    > $$B$$: first is even
+    > $$C$$: second is even
+
+--- 
+To statistics
 
 ## Part 6. Theory
 
