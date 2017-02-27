@@ -1234,6 +1234,39 @@ Selection bias occurs when two populations are not homogenity and thus may cause
 Randomization is at the core of experimentation because it balances out these confounding variables.
 Selection bias, in general, is a problematic situation in which error is introduced due to a non-random population sample. For example, if a given sample of 100 test cases was made up of a 60/20/15/5 split of 4 classes which actually occurred in relatively equal numbers in the population, then a given model may make the false assumption that probability could be the determining predictive factor. Avoiding non-random samples is the best way to deal with bias; however, when this is impractical, techniques such as resampling, boosting, and weighting are strategies which can be introduced to help deal with the situation. 
 
+## Part 6. Theory
+
+1. Chebyshev's Inequality
+
+    > $P(|X - \mathbb E (X)| \ge a) \le \frac{Var(X)}{a^2}$
+    > $P(X \ge a) \le \frac{\mathbb E[f(x)]}{f(a)}$
+
+2. Weak Law of Large Number 
+
+    > If $X_1, ...$ are independent random variables such that $\mathbb E[X_n] = \mu$ and $Var[X_n] \le \sigma^2$ for each $n$, then $\frac{X_1 + X_2 + \cdots X_n}{n}\rightarrow \mu$ in probability. 
+3. Borel Cantelli Lemma
+
+    > Suppose $A_1, ...$ is a sequence of events. 
+    (1) If $\sum P(A_n) < \infty$, then $P(A_n \ i.o.) = P(\lim \sup A_n) = 0$
+    (2) If $\sum P(A_n) = \infty$, and $A_i$ are independent, then $P(A_n \ i.o.) = P(\lim \sup A_n) = 1$
+    
+    > $\lim \sum A_n = \cap_{n=1}^{\infty} \cup_{m=n}^{\infty} A_m$
+    
+4. Strong Law of Large Number
+
+    > Let $X_1,...$ be independent random variables each with mean $\mu$. Suppose there exists an $M < \infty$ such that $\mathbb E[X_n^4]\le M$ for each $n$. Then $w.p.1$, 
+    $$\frac{X_1 + X_2 + \cdots X_n}{n} \rightarrow \mu$$
+    > Counter example:
+    > $P(X_n = 2^n) = 2^{-n}$, then $\mathbb E[X_n] = 1$ but $\frac{X_1 + X_2 + ... X_n}{n} \rightarrow 0$
+    
+5. Central Limit Theorem 
+
+    > Let $X_1, ...$ be independent, identically distributed random variables with mean $\mu$ and finite variance. Then 
+    $$\frac{X_1 + X_2 + ... X_n}{\sqrt{n}} \rightarrow N(\mu, \sigma^2)$$
+    > Proof scratch. 
+    > Let $Y_i =\frac{X_i - \mu}{\sigma}$ with characteristic function $\phi(Y)$. Then $\phi(0) = 1$, $\phi'(0) = 0$ and $\phi''(0) = -1$. 
+    > Then $\phi_{\bar{Y}}(t) = (\phi(\frac{t}{\sqrt{n}}))^n = \phi(0) + \frac{t}{\sqrt{n}}\phi'(0) + \frac{t^2}{2n}\phi''(0) + \epsilon \frac{t^2}{n}$
+    > $$\lim_{n \rightarrow \infty} \phi_{\bar{Y}}(t) = e^{-\frac{t^2}{2}}$$
 
 ---
 
