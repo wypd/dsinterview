@@ -5,8 +5,7 @@
 
 1. Given N points drawn randomly on the circumference of a circle, what is the probability that they are all within a semicircle?
 
-    > $\frac{n}{2^{n-1}}$
-    
+    > $$\frac{n}{2^{n-1}}$$
     > [http://math.stackexchange.com/questions/325141/probability-that-n-points-on-a-circle-are-in-one-semicircle](http://math.stackexchange.com/questions/325141/probability-that-n-points-on-a-circle-are-in-one-semicircle)
     
 2. Five letters to five people. What is the probability that all five letters are all in the wrong envelopes? What if there are $n$ letters? <font color = 'red'> What is the probability of exactly $r$ matches?
