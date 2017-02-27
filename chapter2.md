@@ -9,7 +9,7 @@
     
     > [http://math.stackexchange.com/questions/325141/probability-that-n-points-on-a-circle-are-in-one-semicircle](http://math.stackexchange.com/questions/325141/probability-that-n-points-on-a-circle-are-in-one-semicircle)
     
-2. Five letters to five people. What is the probability that all five letters are all in the wrong envelopes? What if there are $n$ letters? <font color = 'red'> What is the probability of exactly $r$ matches? </font>
+2. Five letters to five people. What is the probability that all five letters are all in the wrong envelopes? What if there are $n$ letters? <font color = 'red'> What is the probability of exactly $r$ matches?
 
     > Inclusion and exclusion.
     ```
