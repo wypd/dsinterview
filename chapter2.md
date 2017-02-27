@@ -181,38 +181,36 @@
     \end{align*}$$
     > Note: interval questions can be written in a recursive way that depends on the first event. 
     
-5. Related to the preceding problem, let $$U$$ be the waiting time until two events occur within $$\tau$$ time units. Derive $$\mathbb E[U]$$. In some applications, the event that has latency $U$ is called a “coincidence.” For example, a volume of biological tissue could be permanently destroyed when two damaging particles are absorbed within $$\tau$$ (or less) time units. The idea here is that following the ﬁrst absorption the tissue needs to recover for $$\tau$$ time units; this opens a window of vulnerability during which a further (second) particle has a lethal eﬀect.
+5. Related to the preceding problem, let $$U$$ be the waiting time until two events occur within $$\tau$$ time units. Derive $$\mathbb E[U]$$. In some applications, the event that has latency $$U$$ is called a “coincidence.” For example, a volume of biological tissue could be permanently destroyed when two damaging particles are absorbed within $$\tau$$ (or less) time units. The idea here is that following the ﬁrst absorption the tissue needs to recover for $$\tau$$ time units; this opens a window of vulnerability during which a further (second) particle has a lethal eﬀect.
 
-    > \begin{align*}
+    > $$\begin{align*}
     \mathbb E [U] & = \int_{0}^{\tau} (\frac{1}{\lambda} + t)f(t) dt + \int_{\tau}^{\infty}(\frac{1}{\lambda} + \tau + \mathbb E[U])f(t) dt\\
     & = \frac{1}{\lambda}(2 - e^{-\lambda\tau}) + \mathbb E[U] e^{-\lambda \tau} \\
     \mathbb E[U] & = \frac{1}{\lambda}\frac{2-e^{-\lambda \tau}}{1 - e^{-\lambda \tau}}
-    \end{align*}
-    
+    \end{align*}$$
 
 ### Uniform distirbution 
 
 1. Alice writes two distinct real numbers between 0 and 1 on two sheets of paper. Bob selects one of the sheets randomly to inspect it. He then has to declare whether the number he sees is the bigger or smaller of the two. Find and prove a strategy so that Bob can guess correctly with more than 0.5 chance.
 
-    > Denote the two number Alice wrote as $x$ and $y$. WLOG, Bob took $x$. Then Bob generated another uniform number $u \sim Unif(0, 1)$. Bob would claim $x$ is the larger one if $x\ge u$, otherwise $x$ is the smaller one.
+    > Denote the two number Alice wrote as $$x$$ and $$y$$. WLOG, Bob took $$x$$. Then Bob generated another uniform number $$u \sim Unif(0, 1)$$. Bob would claim $$x$$ is the larger one if $$x\ge u$$, otherwise $$x$$ is the smaller one.
     > 
-    \begin{align*}
+    $$\begin{align*}
     P(\text{Bob win}) & = P(x > u | x > y)P(x > y) + P(x < u | x < y)P(x < y) \\
     & = \frac{\max(x, y) - \min(x, y) + 1}{2} 
-    \end{align*}
+    \end{align*}$$
 
 2. Select numbers uniformly distributed between 0 and 1, one after the other, as long as they keep decreasing; stop selecting when you obtain a number that is greater than the previous one you selected. 1) On average, how many numbers have you selected? 2) What is the average value of the smallest number you have selected?
 
-    > For any $n$ RVs, there is only $\frac{1}{n!}$ chance that it is a strickly decreasing sequence. That is $P(N \ge n) = \frac{1}{(n - 1)!}$ since the first $n - 1$ RVs should be strickly decreasing. 
-    > So the expected number of runs $\mathbb{E}[N] = e$. 
-    > $\mathbb{E}[X_{1, N}] = \mathbb{E}[\mathbb{E}[X_{1, n}]|N=n] = \sum_{n = 1}\frac{1}{n + 1}[\frac{1}{(n - 1)!} - \frac{1}{n!}] = 3 - e$
-    
+    > For any $n$ RVs, there is only $$\frac{1}{n!}$$ chance that it is a strickly decreasing sequence. That is $$P(N \ge n) = \frac{1}{(n - 1)!}$$ since the first $$n - 1$$ RVs should be strickly decreasing. 
+    > So the expected number of runs $$\mathbb{E}[N] = e$$. 
+    > $$\mathbb{E}[X_{1, N}] = \mathbb{E}[\mathbb{E}[X_{1, n}]|N=n] = \sum_{n = 1}\frac{1}{n + 1}[\frac{1}{(n - 1)!} - \frac{1}{n!}] = 3 - e$$    
     > [http://math.stackexchange.com/questions/1447915/choosing-increasing-numbers-from-a-uniform-distribution/1447933](http://math.stackexchange.com/questions/1447915/choosing-increasing-numbers-from-a-uniform-distribution/1447933)
 
 3. The stick drops and breaks at one place. Then the larger piece is taken and dropped again, breaking at one place. What is the probability that the three pieces could form a triangle?
 
-    > WLOG, $X_1 \sim Unif(0, 1/2)$ and $X_2 \sim Unif(0, 1 - X_1)$ be the two pieces. The probability to form a triangle is 
-    > $\int_{0}^{1/2}2\frac{2x}{1 - x}dx = 2(\ln(2) - 1)$
+    > WLOG, $$X_1 \sim Unif(0, 1/2)$$ and $$X_2 \sim Unif(0, 1 - X_1)$$ be the two pieces. The probability to form a triangle is 
+    > $$\int_{0}^{1/2}2\frac{2x}{1 - x}dx = 2\ln(2) - 1$$
 
 4. Take a stick and break it randomly into three pieces. What is the probability you can form a triangle from the pieces?
 
@@ -222,12 +220,12 @@
 5. The average length of the shortest / longest segment if the stick is broken into $n$ pieces. 
 
     > Shortest:
-    > $P(X_{(1)} > c) = (1 - nc)^{n - 1}$
-    > $\mathbb{E}[X_{(1)}] = \int_{0}^{1/n}P(X_{(1)}>c)dc= \frac{1}{n^2}$
+    > $$P(X_{(1)} > c) = (1 - nc)^{n - 1}$$
+    > $$\mathbb{E}[X_{(1)}] = \int_{0}^{1/n}P(X_{(1)}>c)dc= \frac{1}{n^2}$$
     > Longest:
-    > $P(X_{(n)} > c) = n(1-x)^{n-1} - \binom{n}{2} (1 - 2x)^{n-1} + \cdots + (-1)^{k-1} \binom{n}{k} (1 - kx)^{n-1} + \cdots $
-    > $\mathbb{E}[X_{(n)}] = \int P(X_{(n)} > x) dx = \sum_{k=1}^n \binom{n}{k} (-1)^{k-1} \int_0^{1/k} (1 - kx)^{n-1} dx = \sum_{k=1}^n \binom{n}{k} (-1)^{k-1} \frac{1}{nk} = \frac{1}{n} \sum_{k=1}^n \frac{\binom{n}{k}}{k} (-1)^{k-1} = \frac{H_n}{n}$
-    
+    > $$P(X_{(n)} > c) = n(1-x)^{n-1} - \binom{n}{2} (1 - 2x)^{n-1} + \cdots + (-1)^{k-1} \binom{n}{k} (1 - kx)^{n-1} + \cdots $$
+    > $$\mathbb{E}[X_{(n)}] = \int P(X_{(n)} > x) dx = \sum_{k=1}^n \binom{n}{k} (-1)^{k-1} \int_0^{1/k} (1 - kx)^{n-1} dx = \sum_{k=1}^n \binom{n}{k} (-1)^{k-1} \frac{1}{nk} = \frac{1}{n} \sum_{k=1}^n \frac{\binom{n}{k}}{k} (-1)^{k-1} = \frac{H_n}{n}$$
+
     > [http://math.stackexchange.com/questions/14190/average-length-of-the-longest-segment](http://math.stackexchange.com/questions/14190/average-length-of-the-longest-segment)
 
 6.  Suppose $X_1, ..., X_n$ are independent identical distributed from [0, 1] and uniform on the interval. What is the expected value of the maximum? What is the expected value of the difference between maximum and the minimum?
