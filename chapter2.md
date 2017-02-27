@@ -173,16 +173,15 @@
 
     > Related problem: If a car passes at the crosswalk on average every 10 seconds and you need 20 seconds to pass the road, how long does it take you on average to cross the road? [http://www.cseblog.com/2011/12/crossing-road.html](http://www.cseblog.com/2011/12/crossing-road.html)
 
-    > \begin{align*}
+    > $$\begin{align*}
     \mathbb E[W] & = \int_{t=0}^{\infty} \mathbb E [W|t_1 = t] f(t) dt\\
     & = \int_{0}^{\tau} (t + \mathbb E[W]) f(t) dt + \tau (1 - F(\tau)) \\
     & = (1 - e^{-\lambda \tau}) \mathbb E[W] + \frac{1}{\lambda}(1-e^{-\lambda \tau}) \\
     \mathbb{E}[W] & = \frac{1}{\lambda}(e^{\lambda\tau} - 1)
-    \end{align*}
-
+    \end{align*}$$
     > Note: interval questions can be written in a recursive way that depends on the first event. 
     
-5. Related to the preceding problem, let $U$ be the waiting time until two events occur within $\tau$ time units. Derive $\mathbb E[U]$. In some applications, the event that has latency $U$ is called a “coincidence.” For example, a volume of biological tissue could be permanently destroyed when two damaging particles are absorbed within $\tau$ (or less) time units. The idea here is that following the ﬁrst absorption the tissue needs to recover for $\tau$ time units; this opens a window of vulnerability during which a further (second) particle has a lethal eﬀect.
+5. Related to the preceding problem, let $$U$$ be the waiting time until two events occur within $$\tau$$ time units. Derive $$\mathbb E[U]$$. In some applications, the event that has latency $U$ is called a “coincidence.” For example, a volume of biological tissue could be permanently destroyed when two damaging particles are absorbed within $$\tau$$ (or less) time units. The idea here is that following the ﬁrst absorption the tissue needs to recover for $$\tau$$ time units; this opens a window of vulnerability during which a further (second) particle has a lethal eﬀect.
 
     > \begin{align*}
     \mathbb E [U] & = \int_{0}^{\tau} (\frac{1}{\lambda} + t)f(t) dt + \int_{\tau}^{\infty}(\frac{1}{\lambda} + \tau + \mathbb E[U])f(t) dt\\
