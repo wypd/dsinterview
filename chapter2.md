@@ -268,47 +268,47 @@
 
     > $$X \sim N(0, 1)$$, $$Z \sim Unif(0, 1)$$, $$Y = XZ$$ 
 
-3. <font color = 'red'>Given two standard normal random variables $W$ and $Z$, what is the distribution of $W/Z$?</font>
+3. Given two standard normal random variables $$W$$ and $$Z$$, what is the distribution of $$W/Z$$?
 
-    > \begin{align*}
+    > $$\begin{align*}
     P(\frac{W}{Z}=r) & = P(W = rZ) \\
     & = \int \frac{1}{2\pi} \exp\{-\frac{z^2}{2}-\frac{z^2r^2}{2}\}dz \\
     & = \frac{1}{\sqrt{2\pi(1+r^2)}}
-    \end{align*}
+    \end{align*}$$
 
 ## Part 4. Stochastic Process
 
 1. There is one amoeba in a pond. After every minute the amoeba may die, stay the same, split into two or split into three with equal probability. All its offspring, if it has any, will behave the same (and independent of other amoebas). What is the probability the amoeba population will die out?
 
-    > $4p = 1 + p + p^2 + p^3$
+    > $$4p = 1 + p + p^2 + p^3$$
     
-    > For absorbing probability with one barrier, say, 0, then $p_n = p_1^n$. 
+    > For absorbing probability with one barrier, say, 0, then $$p_n = p_1^n$$. 
     
 2. Basketball scores. A basketball player is taking 100 free throws. She scores one point if the ball passes through the hoop and zero if she misses. She has scored on her first throw and missed on her second. For each of the following throw the probability of her scoring is the fraction of throws she has made so far. For example, if she has scored 23 points after throws (including the first and the second), what is the probability that she scores exactly 50 baskets?
 
-    > $P((win=x, loss=y)) = \frac{1}{x+y-1}$
+    > $$P((win=x, loss=y)) = \frac{1}{x+y-1}$$
     
-3. Two players, $A$ and $B$, alternatively toss a fair coin ($A$ tosses the coin first, then $B$ tosses the coin, then $A$, then $B$, ...). The sequence of heads and tails is recorded. If there is a head followed by a tail (HT subsequence), the game ends and the person who tosses the tail wins. what is the probability that $A$ wins the game?
+3. Two players, $$A$$ and $$B$$, alternatively toss a fair coin ($$A$$ tosses the coin first, then $$B$$ tosses the coin, then $$A$$, then $$B$$, ...). The sequence of heads and tails is recorded. If there is a head followed by a tail (HT subsequence), the game ends and the person who tosses the tail wins. what is the probability that $$A$$ wins the game?
 
-    > $P(A) = \frac{1}{2}(1-P(A)) + \frac{1}{2}\frac{1}{3}$
-    > $P(A) = \frac{4}{9}$
+    > $$P(A) = \frac{1}{2}(1-P(A)) + \frac{1}{2}\frac{1}{3}$$
+    > $$P(A) = \frac{4}{9}$$
 
 4. You have two boxes each containing two homing pigeons. To send a message, you select a box at random and pick a pigeon from that box. The pigeon delivers the message and returns to a random box (not necessarily the one it was picked from). What is the expected number of messages delivered before you discover that the box you choose at random is empty? (From Nick’s Quant blog)
 
-    > Define states as $(2,2)$, $(1,3)$, $(0,4)$, and $End$.
+    > Define states as $$(2,2)$$, $$(1,3)$$, $$(0,4)$$, and $$End$$.
     
     > [http://quantquestions.tumblr.com/post/35700179655/homing-pigeons](http://quantquestions.tumblr.com/post/35700179655/homing-pigeons)
 
 5. At a theater ticket office, 2n people are waiting to buy tickets. n of them have only \$5 bills and the other n people have only \$10 bills. The ticket seller has no change to start with. If each person buys \$5 ticket, what is the probability that all people will be able to buy their tickets without having to change positions?
 
-    > Reflection theorem. Among all $2n \choose n$ paths, $2n \choose n + 1$ paths will dip $S_n = -1$. So the probability is $\frac{n}{n+1}$.
+    > Reflection theorem. Among all $$2n \choose n$$ paths, $$2n \choose n + 1$$ paths will dip $$S_n = -1$$. So the probability is $$\frac{n}{n+1}$$.
     
-6. (**Ballot problem**) In an election, two candidates, Albert and Benjamin, have in a ballot box $a$ and $b$ voted respectively, $a<b$. If ballots are randomly drawn and tallied, what is the chance that at least once after the first tally the candidates have the same number of tallies?
+6. (**Ballot problem**) In an election, two candidates, Albert and Benjamin, have in a ballot box $$a$$ and $$b$$ voted respectively, $$a<b$$. If ballots are randomly drawn and tallied, what is the chance that at least once after the first tally the candidates have the same number of tallies?
 
     > [http://webspace.ship.edu/msrenault/ballotproblem/](http://webspace.ship.edu/msrenault/ballotproblem/)
     > [https://en.wikipedia.org/wiki/Bertrand%27s_ballot_theorem](https://en.wikipedia.org/wiki/Bertrand%27s_ballot_theorem)
 
-7. <font color = 'red'>Players A and B match pennies for $N$ times. They keep a tally of their gains and losses. After the first toss, what is the chance that at no time during the game will they be even? </font>
+7. **Difficult** Players A and B match pennies for $$N$$ times. They keep a tally of their gains and losses. After the first toss, what is the chance that at no time during the game will they be even?
 
     > $P(\text{no tie}) = \frac{N - 1 \choose n}{2^{N-1}}$
 
