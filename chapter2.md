@@ -65,49 +65,49 @@
 
 8. How many different ways can you invest \$20,000 into five funds in increments of \$1,000?
 
-    > ${24 \choose 4} = \frac{24 \times 23 \times 22 \times 21}{24} = 10626$
+    > $${24 \choose 4} = \frac{24 \times 23 \times 22 \times 21}{24} = 10626$$
     > [Stars and bars](https://en.wikipedia.org/wiki/Stars_and_bars_%28combinatorics%29)
     > [https://en.wikipedia.org/wiki/Twelvefold_way](https://en.wikipedia.org/wiki/Twelvefold_way)
     
-9. You are making chocolate chip cookies. You add N chips randomly to the cookie dough, and you randomly split the dough into 100 equal cookies. How many chips should go into the dough to give a probability of at least $90\%$ that every cookie has at least one chip?
+9. You are making chocolate chip cookies. You add N chips randomly to the cookie dough, and you randomly split the dough into 100 equal cookies. How many chips should go into the dough to give a probability of at least $$90\%$$ that every cookie has at least one chip?
 
-    > Splitting $N$ chips on $100$ cookies, we have $N + 100 - 1 \choose N$ different choices.
-    > Among all choices, we have $N - 1 \choose N - 100 $ different ways to spread at least one chip on each cookie. 
+    > Splitting $$N$$ chips on $$100$$ cookies, we have $$N + 100 - 1 \choose N$$ different choices.
+    > Among all choices, we have $$N - 1 \choose N - 100 $$ different ways to spread at least one chip on each cookie. 
 
 10. I throw 1 die 4 times, trying to reach at least one  6, you throw 2 dice 24 times and try to reach at least one double 6 (6,6). Who has greater chance of winning?
 
-    > At least one 6 out of 4 rolls: $p_1 = 1 - (\frac{5}{6})^4$
-    > At least double 6 in 24 rools: $p_2 = 1 - (\frac{35}{36})^{24}$
-    > $p_1 > p_2$
+    > At least one 6 out of 4 rolls: $$p_1 = 1 - (\frac{5}{6})^4$$
+    > At least double 6 in 24 rools: $$p_2 = 1 - (\frac{35}{36})^{24}$$
+    > $$p_1 > p_2$$
     
 11. Suppose we roll a fair die 10 times. What is the probability that the sequence of rolls is non-decreasing (i.e., the next roll is never less than the current roll)?
 
-    > ${15 \choose 5}/6^{10}$
+    > $${15 \choose 5}/6^{10}$$
     > stars and bins. 
     
 12.  Suppose we roll n dice and keep the highest one. What is the distribution of values?
 
     > 
-    \begin{align*}
+    $$\begin{align*}
     P(K_{max}=k) & = P(K_{max} \le k) - P(K_{max} \le k - 1)\\
     & = (\frac{k}{6})^n-(\frac{k-1}{6})^n 
-    \end{align*}
+    \end{align*}$$
 
 13. Four fair, 6-sided dice are rolled. The highest three are summed. What is the distribution of the sum?
     
     > 3 - 18. Not for hand calculation!
 
-14. <font color = 'red'>Suppose we roll a die 6k times. What is the probability that each possible face comes up an equal number of times (i.e., k times)? Find an asymptotic expression for this probability in terms of k.</font>
+14. Suppose we roll a die 6k times. What is the probability that each possible face comes up an equal number of times (i.e., k times)? Find an asymptotic expression for this probability in terms of k.
 
-    > $P = \frac{(6k)!}{6^{6k}(k!)^6}$
-    > By Stirling approximation, $n!\sim \sqrt{2\pi n}(\frac{n}{e})^n$, 
-    > $\lim_{k\rightarrow \infty} \frac{P}{\sqrt{6} (2\pi k)^{5/2}} = 1$
+    > $$P = \frac{(6k)!}{6^{6k}(k!)^6}$$
+    > By Stirling approximation, $$n!\sim \sqrt{2\pi n}(\frac{n}{e})^n$$, 
+    > $$\lim_{k\rightarrow \infty} \frac{P}{\sqrt{6} (2\pi k)^{5/2}} = 1$$
 
 15. Your n guests (n>0) are all baseball fans and they wear baseball caps. There is a total of s teams (s>0) in the league. Everyone of your guests is equally likely to be a fan of any one of these teams. Compute the expected number of people who will pick a cap from their own team.
 
     > [http://www.cseblog.com/2010/10/baseball-party.html](http://www.cseblog.com/2010/10/baseball-party.html)
     
-    > For each guest, the probability to pick up the correct hat is $\frac{n + s - 1}{ns}$, for $n$ people, the total number is $\frac{n + s - 1}{s}$
+    > For each guest, the probability to pick up the correct hat is $$\frac{n + s - 1}{ns}$$, for $$n$$ people, the total number is $$\frac{n + s - 1}{s}$$
 
 ## Part 2. Bayesian
 
@@ -117,33 +117,32 @@
 
 2. **Monty Hall.**
 
-    > Let 1 be the chosen door, 2 be the openned door. $C_i$ means the event that the car is behind door $i$, $G_2$ be the event that door 2 is opened.
-    > $P(C_i) = \frac{1}{3}$, $P(G_2|C_1) = \frac{1}{2}$, $P(G_2|C_2) = 0$, and $P(G_2|C_3)=1$. So we have $P(C_1|G_2) = \frac{1}{3}$.
+    > Let 1 be the chosen door, 2 be the openned door. $$C_i$$ means the event that the car is behind door $$i$$, $$G_2$$ be the event that door 2 is opened.
+    > $$P(C_i) = \frac{1}{3}$$, $$P(G_2|C_1) = \frac{1}{2}$$, $$P(G_2|C_2) = 0$$, and $$P(G_2|C_3)=1$$. So we have $$P(C_1|G_2) = \frac{1}{3}$$.
     
     > [https://en.wikipedia.org/wiki/Monty_Hall_problem](https://en.wikipedia.org/wiki/Monty_Hall_problem)
     
 3. I have two children. One is a boy born on a Tuesday. What is the probability I have two boys?
 
-    > Denote $A$ a boy born on a Tuesday, $B$ two boys, $\bar{B}$ 1 boy.
-    \begin{align*}
+    > Denote $$A$$ a boy born on a Tuesday, $$B$$ two boys, $$\bar{B}$$ 1 boy.
+    $$\begin{align*}
     P(B|A) & = \frac{P(A|B)P(B)}{P(A|B)P(B) + P(A|\bar{B})P(\bar{B}) } \\
     & = \frac{\frac{13}{49}\frac{1}{3}}{\frac{13}{49}\frac{1}{3} + \frac{1}{7}\frac{2}{3}} \\
     & = \frac{13}{27}
-    \end{align*}
-
+    \end{align*}$$
     > [http://math.stackexchange.com/questions/4400/boy-born-on-a-tuesday-is-it-just-a-language-trick](http://math.stackexchange.com/questions/4400/boy-born-on-a-tuesday-is-it-just-a-language-trick)
 
-4. <font color = 'red'>Choosing the largest dowry. The king offers a wise man a chance to marry the young lady in the court with the largest dowry. The amounts of the dowies are written on slips on paper and mixed. A slip is drawn at random and the wise man must decide whether that is the larget dowry or not. If he decides it is, he gets the lady and her dowry if he is correct; otherwise he gets nothing. How should the wise man make his decision? What if we know that the dowry is uniformly distributed from (0, 1)?</font>
+4. Choosing the largest dowry. The king offers a wise man a chance to marry the young lady in the court with the largest dowry. The amounts of the dowies are written on slips on paper and mixed. A slip is drawn at random and the wise man must decide whether that is the larget dowry or not. If he decides it is, he gets the lady and her dowry if he is correct; otherwise he gets nothing. How should the wise man make his decision? What if we know that the dowry is uniformly distributed from (0, 1)?
 
-    > The optimal policy is to find $r$, then after first $r$ samples, take the first sample that are larger than all previous ones. 
+    > The optimal policy is to find $r$, then after first $$r$$ samples, take the first sample that are larger than all previous ones. 
     > 
-    \begin{align*} 
+    $$\begin{align*} 
     P(r) & = \sum_{i = 1}^n P(\text{applicant i is selected} \cap \text{applicant i is the best} ) \\
     & = \sum_{i = r + 1}^n \frac{1}{n} P(\text{best among i - 1 is in first r applicants} | \text{applicant i is the best}) \\
     & = \sum_{i = r + 1}^n \frac{r}{n (i - 1)} \\
     & \rightarrow -\frac{r}{n} \ln(\frac{r}{n})
-    \end{align*}
-    
+    \end{align*}$$
+    > The optimal policy is to take $$r \sim N e^{-1}$$
     > [https://en.wikipedia.org/wiki/Secretary_problem](https://en.wikipedia.org/wiki/Secretary_problem)
 
 ## Part 3. Random Variables
@@ -154,23 +153,23 @@
 
     > Poisson distribution and exponential distribution
     
-    > $X_i \sim \exp(20)$ and $N_{100} \sim Poisson(5)$.
+    > $$X_i \sim \exp(20)$$ and $$N_{100} \sim Poisson(5)$$.
     
 2. What is the probability that random variable of poisson distribution takes even values?
 
-    > Denote $S_o = \sum_{n = 2k + 1} P(N = n)$ and $S_e = \sum_{n = 2k} P(N = n)$, where $P(N = n) = \frac{\lambda^n}{n!} e^{-\lambda}$.
-    > We have $S_o + S_e = \sum_n P(N=n) = 1$ and $S_e - S_o = \sum_n (-1)^n P(N = n) = e^{-2\lambda}$, so $S_e = (1 + e^{-2\lambda}) / 2$.
+    > Denote $$S_o = \sum_{n = 2k + 1} P(N = n)$$ and $$S_e = \sum_{n = 2k} P(N = n)$$, where $$P(N = n) = \frac{\lambda^n}{n!} e^{-\lambda}$$.
+    > We have $$S_o + S_e = \sum_n P(N=n) = 1$$ and $$S_e - S_o = \sum_n (-1)^n P(N = n) = e^{-2\lambda}$$, so $$S_e = (1 + e^{-2\lambda}) / 2$$.
 
 3. Nearest neighbor distribution.
 
     > The nearest neighbor function, as opposed to the spherical contact distribution function, is defined in relation to some point of a point process already existing in some region of space. More precisely, for some point in the point process $N$, the nearest neighbor function is the probability distributioni of the distance from that point to the nearest or closest neighboring point. 
     
-    > For a Poisson point process in two dimensional space, $P(D\ge r) = P(N(r) = 0) = e^{-\lambda \pi r^2}$. Then, the expected distance is $\mathbb{E}[D] = \frac{1}{2\sqrt{\lambda}}$
+    > For a Poisson point process in two dimensional space, $$P(D\ge r) = P(N(r) = 0) = e^{-\lambda \pi r^2}$$. Then, the expected distance is $$\mathbb{E}[D] = \frac{1}{2\sqrt{\lambda}}$$
     
     > [https://en.wikipedia.org/wiki/Nearest_neighbour_distribution](https://en.wikipedia.org/wiki/Nearest_neighbour_distribution)
     > [http://mathoverflow.net/questions/218751/nearest-neighbor-for-planar-poisson-is-normally-distributed](http://mathoverflow.net/questions/218751/nearest-neighbor-for-planar-poisson-is-normally-distributed0)
 
-4. Denote as $\{N(t), t ≥ 0\}$ a Poisson process with rate $\lambda$. Let $W$ be the waiting time until for the ﬁrst time no event in $\{N(t)\}$ has occurred for the last $\tau$ time units. Derive $\mathbb E[W]$. For example, $\{N(t)\}$ might stand for the sequence of cars passing at a crosswalk. A pedestrian needs $\tau$ seconds to cross the road — how long does it on average take before he has reached the other side of the road?
+4. Denote as $$\{N(t), t ≥ 0\}$$ a Poisson process with rate $$\lambda$$. Let $$W$$ be the waiting time until for the ﬁrst time no event in $$\{N(t)\}$$ has occurred for the last $$\tau$$ time units. Derive $$\mathbb E[W]$$. For example, $$\{N(t)\}$$ might stand for the sequence of cars passing at a crosswalk. A pedestrian needs $$\tau$$ seconds to cross the road — how long does it on average take before he has reached the other side of the road?
 
     > Related problem: If a car passes at the crosswalk on average every 10 seconds and you need 20 seconds to pass the road, how long does it take you on average to cross the road? [http://www.cseblog.com/2011/12/crossing-road.html](http://www.cseblog.com/2011/12/crossing-road.html)
 
