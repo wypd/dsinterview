@@ -228,45 +228,45 @@
 
     > [http://math.stackexchange.com/questions/14190/average-length-of-the-longest-segment](http://math.stackexchange.com/questions/14190/average-length-of-the-longest-segment)
 
-6.  Suppose $X_1, ..., X_n$ are independent identical distributed from [0, 1] and uniform on the interval. What is the expected value of the maximum? What is the expected value of the difference between maximum and the minimum?
+6.  Suppose $$X_1, ..., X_n$$ are independent identical distributed from [0, 1] and uniform on the interval. What is the expected value of the maximum? What is the expected value of the difference between maximum and the minimum?
 
-    > $\frac{n}{n+1}$ and $\frac{n-1}{n+1}$
+    > $$\frac{n}{n+1}$$ and $$\frac{n-1}{n+1}$$
 
 7. Buffon's needle with horizontal and vertial rulings. Suppose we toss a needle of length 2l on a gride with both horizontal and vertical rulings spaced one unit apart. What is the mean number of lines the needle crosses?
 
-    > $\mathbb{E}N = 2 \frac{2}{\pi} \int_0^{\pi/2} 2l \cdot sin(\theta) d\theta = \frac{8l}{\pi}$
+    > $$\mathbb{E}N = 2 \frac{2}{\pi} \int_0^{\pi/2} 2l \cdot sin(\theta) d\theta = \frac{8l}{\pi}$$
 
-8. <font color = 'red'> A fair, n-sided die is rolled and summed until the sum is at least n. What is the expected number of rolls? </font>
+8. A fair, n-sided die is rolled and summed until the sum is at least n. What is the expected number of rolls?
 
-    > \begin{align*}
+    > $$\begin{align*}
     \mathbb E[N_1] & = 1 \\
     \mathbb E[N_2] & = 1 + \frac{1}{n}\mathbb E[N_1] \\
     \cdots \\
     \mathbb E[N_n] & = 1 + \sum_{i=1}^n \frac{1}{n} \mathbb E[N_i] \\
     & = (1+\frac{1}{n})^{n-1} \rightarrow e 
-    \end{align*}
+    \end{align*}$$
 
 9. <font color = 'red'> A camel is loaded with straws until it's back breaks. Each straw has a weight uniformly distributed between 0 and 1, independent of other straws. The camel's back breaks as soon as the total weight of all the straws exceeds 1. Find the expected weight of the last straw that breaks the camel's back. </font>
 
-    > Let $f(x)$ be the density function of the last straw. 
-    > $f(x) = \sum_n P(S_n < 1 \le S_n + x) = \sum_n P(S_n < 1) - \sum_n P(S_n < 1 - x)$
-    > where $\sum_n P(S_n < x) = x + \frac{x^2}{2!} + \frac{x^3}{3!} ... = e^x - 1$
-    > So, $f(x) = e - e^{1-x}$, $\mathbb E X = \int xf(x) dx = 2 - e / 2$
+    > Let $$f(x)$$ be the density function of the last straw. 
+    > $$f(x) = \sum_n P(S_n < 1 \le S_n + x) = \sum_n P(S_n < 1) - \sum_n P(S_n < 1 - x)$$
+    > where $$\sum_n P(S_n < x) = x + \frac{x^2}{2!} + \frac{x^3}{3!} ... = e^x - 1$$
+    > So, $$f(x) = e - e^{1-x}$$, $$\mathbb E X = \int xf(x) dx = 2 - e / 2$$
     
     > [http://math.stackexchange.com/questions/734700/draws-from-the-uniform-distribution-are-taken-until-the-sum-exceeds-1-what-is-t](http://math.stackexchange.com/questions/734700/draws-from-the-uniform-distribution-are-taken-until-the-sum-exceeds-1-what-is-t)
 
 
 ### Normal Distribution 
 
-1. If $X$ follows normal distribution $N(\mu, \sigma^2)$, what is $\mathbb{E}[X^n]$?
+1. If $$X$$ follows normal distribution $$N(\mu, \sigma^2)$$, what is $$\mathbb{E}[X^n]$$?
     
-    > $\mathbb{E}[e^X] = \exp(\mu + \frac{\sigma^2}{2})$
-    > Let $Y\sim N(0,1)$, $\mathbb{E}[Y^n] = \int y^n \exp(-\frac{y^2}{2})dy = (n - 1)\int y^{n-2} \exp(-\frac{y^2}{2})dy=(n-1)\mathbb{E}[Y^{n-2}]$
-    > $\mathbb{E}[(X-\mu)^n] = \begin{cases}0, & n~\text{odd},\\ \sigma^n(n-1)(n-3)\cdots 3\cdot 1,& n~\text{even}\end{cases}$
+    > $$\mathbb{E}[e^X] = \exp(\mu + \frac{\sigma^2}{2})$$
+    > Let $$Y\sim N(0,1)$$, $$\mathbb{E}[Y^n] = \int y^n \exp(-\frac{y^2}{2})dy = (n - 1)\int y^{n-2} \exp(-\frac{y^2}{2})dy=(n-1)\mathbb{E}[Y^{n-2}]$$
+    > $$\mathbb{E}[(X-\mu)^n] = \begin{cases}0, & n~\text{odd},\\ \sigma^n(n-1)(n-3)\cdots 3\cdot 1,& n~\text{even}\end{cases}$$
 
-2. Counter case when $X$ and $Y$ are normal, but their joint is not normal. 
+2. Counter case when $$X$$ and $$Y$$ are normal, but their joint is not normal. 
 
-    > $X \sim N(0, 1)$, $Z \sim Unif(0, 1)$, $Y = XZ$ 
+    > $$X \sim N(0, 1)$$, $$Z \sim Unif(0, 1)$$, $$Y = XZ$$ 
 
 3. <font color = 'red'>Given two standard normal random variables $W$ and $Z$, what is the distribution of $W/Z$?</font>
 
