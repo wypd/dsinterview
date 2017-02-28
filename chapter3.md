@@ -8,21 +8,21 @@ Tags: quant_interview
 
 ### 1. One-Sample Proportion 
 
-Sample proportion distribution approximates a normal distribution under two conditions $n\pi > k$ and $n(1-\pi) > k$, where $k=5,10$, depends on who you ask. 
+Sample proportion distribution approximates a normal distribution under two conditions $$n\pi > k$$ and $$n(1-\pi) > k$$, where $$k=5,10$$, depends on who you ask. 
 
-Then sample proportion to a z-score $Z = \frac{\hat{\pi} - \pi}{\sqrt{\frac{\pi(1-\pi)}{n}}}$
+Then sample proportion to a z-score $$Z = \frac{\hat{\pi} - \pi}{\sqrt{\frac{\pi(1-\pi)}{n}}}$$
 
-**Inference for binomial parameter $H_0: \pi = \pi_0$**
+**Inference for binomial parameter $$H_0: \pi = \pi_0$$**
 
 1. Wald test: use full model / alternative hypo $$z_w = \frac{\hat{\pi} - \pi_0}{\sqrt{\hat{\pi}(1 - \hat{\pi})/n}}$$
 
 2. Score test: use null hypo $$z_s = \frac{\hat{\pi} - \pi_0}{\sqrt{\pi_0(1 - \pi_0)/n}}$$
 
-3. Likelihood ratio test: $z_l = 2(L_1 - L_0)$, following $\chi^2$ under $H_0$
+3. Likelihood ratio test: $$z_l = 2(L_1 - L_0)$$, following $$\chi^2$$ under $$H_0$$
 
 **Sample size for hypo testing**
 
-To distinguish two populations $Ber(\pi_0)$ and $Ber(\pi_1)$, we have 
+To distinguish two populations $$Ber(\pi_0)$$ and $$Ber(\pi_1)$$, we have 
 
 $$N \ge \frac{(z_\alpha\sqrt{p_0(1-p_0)} + z_\beta\sqrt{p_1(1-p_1)})^2}{(p_0 - p_1)^2}$$
 
@@ -35,30 +35,28 @@ prop.test(650, 1118, 0.5)
 
 ### 2. One-Sample Population Mean
 
-Poulation mean has a t-distribution if the population standard deviation is unknown, with $n - 1$ degree of freedom.
+Poulation mean has a t-distribution if the population standard deviation is unknown, with $$n - 1$$ degree of freedom.
 
 $$t = \frac{\bar{X} - \mu}{s/\sqrt{n}}$$
 
-Confidence interval $\bar{x} \pm t_{\alpha/2}\cdot \frac{s}{\sqrt{n}}$. 
+Confidence interval $$\bar{x} \pm t_{\alpha/2}\cdot \frac{s}{\sqrt{n}}$$. 
 
-**Conditions when $t$-Procedure is proper:**
+**Conditions when $$t$$-Procedure is proper:**
 
 1. When sample size is less than 15, use t-interval procedure only when population is very close to normal.
 2. When sample size is between 15 and 30, it can be used if the variable is not far from normal.
 3. When sample size is large, we can always use t-interval if there are no extreme outliers that cannot be removed.
 
-If one cannot use the $t$ procedure, may look for a more robust procedure such as one-sample Wilcoxon procedure.
+If one cannot use the $$t$$ procedure, may look for a more robust procedure such as one-sample Wilcoxon procedure.
 
-> [One sample Wilcoxon test](https://onlinecourses.science.psu.edu/stat414/node/319)
-
-$\bar{X}$ is normal when $n \ge 30$. 
+$$\bar{X}$$ is normal when $$n \ge 30$$. 
 
 **Sample size for hypo testing**
 
-For $H_0: \mu = \mu_0$ vs $H_1: \mu = \mu_a$, the sample size that satisfies Type I error rate $\alpha$ and power $1-\beta$ is    $N=\sigma^2 \frac{(z_{1 - \alpha/2} + z_\beta)^2}{(\mu_0-\mu_a)^2}$, when the two boundaries are identical. 
+For $$H_0: \mu = \mu_0$$ vs $$H_1: \mu = \mu_a$$, the sample size that satisfies Type I error rate $$\alpha$$ and power $$1-\beta$$ is $$N=\sigma^2 \frac{(z_{1 - \alpha/2} + z_\beta)^2}{(\mu_0-\mu_a)^2}$$, when the two boundaries are identical. 
 
-1. Reject $H_0$ with significant level $1-\alpha$ if $\bar{x} \ge \mu_0 + z_{1 - \alpha/2}\frac{\sigma}{\sqrt{n}}$
-2. Favor $H_0$ with power $\beta$ if $\bar{x} \ge \mu_A - z_{\beta}\frac{\sigma}{\sqrt{n}}$
+1. Reject $$H_0$$ with significant level $$1-\alpha$$ if $$\bar{x} \ge \mu_0 + z_{1 - \alpha/2}\frac{\sigma}{\sqrt{n}}$$
+2. Favor $$H_0$$ with power $$\beta$$ if $$\bar{x} \ge \mu_A - z_{\beta}\frac{\sigma}{\sqrt{n}}$$
 
 > [https://onlinecourses.science.psu.edu/stat414/node/306](https://onlinecourses.science.psu.edu/stat414/node/306)
 
@@ -66,41 +64,41 @@ For $H_0: \mu = \mu_0$ vs $H_1: \mu = \mu_a$, the sample size that satisfies Typ
 
 #### Difference Between Two Population Propotions
 
-Point estimate between the two proportions $\hat{p}_1-\hat{p}_2=\frac{x_1}{n_1}-\frac{x_2}{n_2}$
+Point estimate between the two proportions $$\hat{p}_1-\hat{p}_2=\frac{x_1}{n_1}-\frac{x_2}{n_2}$$
     
-Standard deviation is given by  $se(\hat{p}_1-\hat{p}_2)=\sqrt{\frac{\hat{p_1}(1-\hat{p_1})}{n_1}+\frac{\hat{p_2}(1-\hat{p_2})}{n_2}}$
+Standard deviation is given by  $$se(\hat{p}_1-\hat{p}_2)=\sqrt{\frac{\hat{p_1}(1-\hat{p_1})}{n_1}+\frac{\hat{p_2}(1-\hat{p_2})}{n_2}}$$
     
 When the observed number of successes and the observed number of failures are greater than or equal to 5 for both populations, then the sampling distribution is approximately normal.
     
-The confidence interval is given by $\hat{p}_1-\hat{p}_2 \pm z_{\alpha/2} \cdot s.e.(\hat{p}_1-\hat{p}_2)$
+The confidence interval is given by $$\hat{p}_1-\hat{p}_2 \pm z_{\alpha/2} \cdot s.e.(\hat{p}_1-\hat{p}_2)$$
     
-The hypothesis $p_1 = p_2$ can be tested using $z^{*} = \frac{\hat{p}_1 - \hat{p}_2}{\sqrt{\hat{p}(1 - \hat{p})(\frac{1}{n_1}+\frac{1}{n_2})}}$, where $\hat{p} = \frac{x_1 + x_2}{n_1 + n_2}$ (pooled variance)
+The hypothesis $$p_1 = p_2$$ can be tested using $$z^{*} = \frac{\hat{p}_1 - \hat{p}_2}{\sqrt{\hat{p}(1 - \hat{p})(\frac{1}{n_1}+\frac{1}{n_2})}}$$, where $$\hat{p} = \frac{x_1 + x_2}{n_1 + n_2}$$ (pooled variance)
 
-> Equivalence to statistical independence test. The statistics $z^2 = \chi^2$.  
+> Equivalence to statistical independence test. The statistics $$z^2 = \chi^2$$.  
 
 #### Difference Between Two Population Means
 
 **Independent sampling: Two samples mean test**
     
-Point estimate: $\bar{x}_1 - \bar{x}_2$
+Point estimate: $$\bar{x}_1 - \bar{x}_2$$
     
-Standard deviation: $se(\bar{x}_1 - \bar{x}_2) = \sqrt{\frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2}(\frac{1}{n_1} + \frac{1}{n_2})}$ with $df = n_1 + n_2 - 2$
+Standard deviation: $$se(\bar{x}_1 - \bar{x}_2) = \sqrt{\frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2}(\frac{1}{n_1} + \frac{1}{n_2})}$$ with $$df = n_1 + n_2 - 2$$
     
 > When the sample sizes are nearly equal, then a good Rule of Thumb to use is to see if this ratio falls from 0.5 to 2 (that is neither sample standard deviation is more than twice the other).
     
 **Paired sampling**
 
-$\bar{d}\pm t_{\alpha/2} \cdot \frac{s_d}{\sqrt{n}}$
+$$\bar{d}\pm t_{\alpha/2} \cdot \frac{s_d}{\sqrt{n}}$$
     
 > Assumption: the differences of the pairs follow a normal distribution or the number of pairs is large (note here that if the number of pairs is < 30, we need to check whether the differences are normal, but we do not need to check for the normality of each population)
     
 #### Two Population Variances
     
-Under $H_0: \sigma_1^2 = \sigma_2^2$
+Under $$H_0: \sigma_1^2 = \sigma_2^2$$
 
-1. The F-test: assumes the two samples come from populations that are normally distributed. $F^{*} = \frac{s_1^2}{s_2^2} \sim F(n_1 - 1, n_2 - 1)$
+1. The F-test: assumes the two samples come from populations that are normally distributed. $$F^{*} = \frac{s_1^2}{s_2^2} \sim F(n_1 - 1, n_2 - 1)$$
 2. Bonett's test: this assumes only that the two samples are quantitative. 
-3. Levene's test: similar to Bonett's in that the only assumption is that the data is quantitative.  Best to use if one or both samples are heavily skewed and your two sample sizes are both under 20.
+3. Levene's test: similar to Bonett's in that the only assumption is that the data is quantitative. Best to use if one or both samples are heavily skewed and your two sample sizes are both under 20.
 
 #### Ratio of Two Proportions
 
