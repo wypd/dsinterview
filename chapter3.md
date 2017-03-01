@@ -106,7 +106,7 @@ Under $$H_0: \sigma_1^2 = \sigma_2^2$$
 
 The standard way to do this is to first log-transform the ratio, calculate a confidence interval on the log scale using the delta method and assuming a normal distribution, then transform back. This works better in moderate sample sizes than using the delta method on the untransformed scale, though it will still behave poorly if the number of events in either group is very small, and fails completely if there are no events in either group.
 
-If there are $x_1$ and $x_2$ successes in the two groups out of totals $n_1$ and $n_2$, then the obvious estimate for the ratio of proportions is $\hat{\theta} = \frac{x_1/n_1}{x_2/n_2}$. 
+If there are $$x_1$$ and $$x_2$$ successes in the two groups out of totals $n_1$ and $n_2$, then the obvious estimate for the ratio of proportions is $\hat{\theta} = \frac{x_1/n_1}{x_2/n_2}$. 
     
 Using the delta method and assuming the two groups are independent and the successes are binomially distributed, you can show that
 
